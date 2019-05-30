@@ -105,7 +105,7 @@ def remove_matching_folders(path, input, apart_from=[]):
 print('Starting...')
 args = sys.argv
 if len(args) != 2:
-    print('Unexpected input - expecting file path to zip file')
+    print('Unexpected input - expecting directory path')
 else:
     do_reduce(sys.argv[1])
 
