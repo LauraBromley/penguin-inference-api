@@ -51,8 +51,6 @@ I happen to have a Windows laptop with a nvidia GPU and so I had set up the fast
 
 In order to get the correctly installed files. I used [Docker](https://docs.docker.com/get-started/) to create a Linux docker image where I could install the python packages. I used a base image of [Amazon Linux](https://hub.docker.com/_/amazonlinux/) which is the environment used by AWS lambda functions. 
 
-NB I am new to Docker, and AWS for that matter, so this may not be the most efficient way to do it, but it worked for me and was fairly straightforward.
-
 Docker File:
 
 ```Dockerfile
