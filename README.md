@@ -1,6 +1,6 @@
 # Penguin Identifier - Machine learning inference with fastai
 
-This repository is for the server-side API of the [Penguin Identifer](https://www.patagoniapenguis.org/which-penguin) application, which uses machine learning to predict penguin species.
+This repository is for the server-side API of the [Penguin Identifer](https://www.patagoniapenguins.org/which-penguin) application, which uses machine learning to predict penguin species.
 
 The front end code is in [this repository](https://github.com/LauraBromley/penguin-inference-static-site), where images can be uploaded and the results displayed.
 
