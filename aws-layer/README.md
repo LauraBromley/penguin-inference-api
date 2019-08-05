@@ -86,6 +86,16 @@ RUN pip install fastai --target=/home/fastai/install/python/lib/python3.6/site-p
 CMD [ "python", "/home/fastai/reduce_dependencies.py", "/home/fastai/install/python" ]
 ```
 
+### _Update (05-Aug-19): Bottleneck error_
+_It seems that the bottleneck package fails to install with the latest version of numpy: 1.17.0 (released 26-Jul-19).
+This can be worked around by installing numpy 1.16.4 and bottleneck before installing pytorch and fastai._
+
+_Add the following lines before `RUN pip install https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-linux_x86_64.whl`_
+```
+RUN pip install numpy==1.16.4 
+RUN pip install Bottleneck
+```
+
 To run, copy the Dockerfile and reduce_dependencies.py to a local directory, and run the following docker commands from that directory.
 
 - Create image (this installs all the dependencies, takes a while):
