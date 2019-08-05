@@ -89,10 +89,11 @@ CMD [ "python", "/home/fastai/reduce_dependencies.py", "/home/fastai/install/pyt
 ### _Update (05-Aug-19): Bottleneck error_
 _It seems that the bottleneck package fails to install (this may be due to the latest version of numpy: 1.17.0, released 26-Jul-19)._
 
-_Can be fixed by adding the target folder to the python path (so that bottleneck can find the numpy installation). Add the following line before `RUN pip install fastai ...`_
+_Can be fixed by adding the target folder to the python path so that bottleneck can find the numpy installation. Add the following line before `RUN pip install fastai ...`_
 
 `ENV PYTHONPATH “${PYTONPATH}:/home/fastai/install/python/lib/python3.6/site-packages”`
 
+### Run the Dockerfile
 To run, copy the Dockerfile and reduce_dependencies.py to a local directory, and run the following docker commands from that directory.
 
 - Create image (this installs all the dependencies, takes a while):
